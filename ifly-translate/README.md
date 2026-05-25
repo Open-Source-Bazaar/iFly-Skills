@@ -43,20 +43,6 @@ python3 scripts/translate.py --raw "测试翻译"
 | `--verbose`, `-v` | 输出源/目标语言标签 | 关闭 |
 | `--raw` | 输出原始 JSON 响应 | 关闭 |
 
-## 常用语言代码
-
-| 代码 | 语言 | 代码 | 语言 |
-|------|------|------|------|
-| `cn` | 中文 | `en` | 英语 |
-| `ja` | 日语 | `ko` | 韩语 |
-| `fr` | 法语 | `de` | 德语 |
-| `es` | 西班牙语 | `ru` | 俄语 |
-| `ar` | 阿拉伯语 | `th` | 泰语 |
-| `vi` | 越南语 | `pt` | 葡萄牙语 |
-| `it` | 意大利语 | `tr` | 土耳其语 |
-
-支持常见别名，例如 `zh -> cn`、`english -> en`、`japanese -> ja`。
-
 ## 限制说明
 
 - 单次文本长度不超过 `4096` 字节。
@@ -70,3 +56,19 @@ python3 scripts/translate.py --raw "测试翻译"
 - 官方文档：https://www.xfyun.cn/doc/nlp/xftrans/API.html
 - 控制台：https://console.xfyun.cn/services/its
 - 价格说明：https://www.xfyun.cn/services/xftrans?target=price
+
+## 扩展说明
+
+### 常用语言代码
+
+| 代码 | 语言 | 代码 | 语言 |
+|------|------|------|------|
+| `cn` | 中文 | `en` | 英语 |
+| `ja` | 日语 | `ko` | 韩语 |
+| `fr` | 法语 | `de` | 德语 |
+| `es` | 西班牙语 | `ru` | 俄语 |
+| `ar` | 阿拉伯语 | `th` | 泰语 |
+| `vi` | 越南语 | `pt` | 葡萄牙语 |
+| `it` | 意大利语 | `tr` | 土耳其语 |
+
+支持常见别名，例如 `zh -> cn`、`english -> en`、`japanese -> ja`。

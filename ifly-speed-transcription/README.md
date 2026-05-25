@@ -53,21 +53,18 @@ python3 scripts/transcribe.py ./audio.mp3 --no-poll
 | `--output`, `-o` | 保存输出到文件 | 不保存 |
 | `--output-format` | `text` 或 `json` | `text` |
 
-## 限制说明
-
-- 当前脚本实现只接受 `.mp3` 文件，其他格式会直接报错。
-- 默认最长轮询约 `10` 分钟。
-- 完整文档与错误码说明见 [`SKILL.md`](./SKILL.md)。
-
-## 实现说明
-
-- 脚本内采用分片上传，大文件会自动走分片流程。
-- 使用两个接口域名：上传 `upload-ost-api.xfyun.cn`，任务处理 `ost-api.xfyun.cn`。
-
 ## 输出说明
 
 - `text`：输出完整转写文本。
 - `json`：输出任务 ID、状态、全文、分段结果和原始响应。
+
+## 限制说明
+
+- 当前脚本实现只接受 `.mp3` 文件，其他格式会直接报错。
+- 脚本内采用分片上传，大文件会自动走分片流程。
+- 使用两个接口域名：上传 `upload-ost-api.xfyun.cn`，任务处理 `ost-api.xfyun.cn`。
+- 默认最长轮询约 `10` 分钟。
+- 完整文档与错误码说明见 [`SKILL.md`](./SKILL.md)。
 
 ## 参考链接
 

@@ -26,7 +26,25 @@ python3 scripts/invoice.py ./medical_bill.png --raw
 python3 scripts/invoice.py ./taxi_receipt.jpg
 ```
 
-## 支持格式
+## 参数说明
+
+| 参数 | 说明 |
+|------|------|
+| `image` | 票据图片或 PDF 路径 |
+| `--raw` | 输出原始 API JSON |
+
+## 限制说明
+
+- 完整文档与错误码说明见 [`SKILL.md`](./SKILL.md)。
+
+## 参考链接
+
+- 官方文档：https://www.xfyun.cn/services/Invoice_recognition
+- 服务购买：https://www.xfyun.cn/services/Invoice_recognition?target=price
+
+## 扩展说明
+
+### 支持格式
 
 脚本按文件后缀自动识别类型，支持：
 
@@ -37,34 +55,18 @@ python3 scripts/invoice.py ./taxi_receipt.jpg
 - `tif` / `tiff`
 - `pdf`
 
-## 输出说明
+### 输出说明
 
 - 默认输出为人类可读的字段列表，例如票据类型、发票代码、发票号码、日期、金额等。
 - 传入 `--raw` 时输出完整 JSON，适合调试或二次处理。
 
-## 参数说明
-
-| 参数 | 说明 |
-|------|------|
-| `image` | 票据图片或 PDF 路径 |
-| `--raw` | 输出原始 API JSON |
-
-## 适用场景
+### 适用场景
 
 - 发票录入
 - 报销单据结构化提取
 - 出租车票、火车票、医疗票据归档
 
-## 限制说明
-
-- 完整文档与错误码说明见 [`SKILL.md`](./SKILL.md)。
-
-## 实现说明
+### 实现说明
 
 - 鉴权方式为 `HMAC-SHA256`。
 - 默认接口地址为 `https://api.xf-yun.com/v1/private/sc45f0684`。
-
-## 参考链接
-
-- 官方文档：https://www.xfyun.cn/services/Invoice_recognition
-- 服务购买：https://www.xfyun.cn/services/Invoice_recognition?target=price

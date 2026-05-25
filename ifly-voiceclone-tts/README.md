@@ -10,6 +10,23 @@ export IFLY_API_KEY="your_api_key"
 export IFLY_API_SECRET="your_api_secret"
 ```
 
+## 快速开始
+
+```bash
+# 一键训练音色并等待完成
+python3 scripts/voiceclone.py train quick \
+  --audio ./recording.wav \
+  --name "MyVoice" \
+  --sex female \
+  --wait
+
+# 使用训练好的 res_id 合成语音
+python3 scripts/voiceclone.py synth "你好，这是我的声音克隆。" --res-id YOUR_RES_ID -o hello.mp3
+
+# 从文件批量合成
+python3 scripts/voiceclone.py synth --file ./article.txt --res-id YOUR_RES_ID -o article.mp3
+```
+
 ## 工作流概览
 
 1. 获取训练文本

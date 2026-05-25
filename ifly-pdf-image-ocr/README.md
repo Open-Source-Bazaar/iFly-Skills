@@ -88,4 +88,5 @@ python3 scripts/pdf_ocr.py ./document.pdf --poll-interval 10 --max-wait 600
 
 ## 参考链接
 
+- 官方文档：https://www.xfyun.cn/doc/words/image_word_recognition/API.html
 - 服务购买：https://console.xfyun.cn/services/se75ocrbm
